@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의일상다이어리 개인정보처리방침</title>
+  <style>
+    @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css');
+    :root {
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --surface: #F1F5F9;
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --accent: #1D4ED8;
+      --accent-soft: #EFF6FF;
+      --accent-border: #BFDBFE;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text-primary);
+      font-family: 'NanumSquareNeo', -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+      line-height: 1.74;
+      font-size: 15.5px;
+      padding: 32px 16px 64px;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 32px;
+    }
+    header { padding-bottom: 24px; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
+    .badge {
+      display: inline-block; font-size: 12.5px; font-weight: 700;
+      color: var(--accent); background-color: var(--accent-soft);
+      border: 1px solid var(--accent-border); padding: 4px 10px;
+      border-radius: 999px; margin-bottom: 12px;
+    }
+    h1 { font-size: 25px; font-weight: 800; margin-bottom: 10px; }
+    .meta { font-size: 13.5px; color: var(--text-muted); }
+    .lead {
+      font-size: 15px; background-color: var(--surface);
+      border-left: 3px solid var(--accent); border-radius: 8px;
+      padding: 16px 18px; margin-bottom: 28px;
+    }
+    section { padding: 20px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+    h2 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    p { color: var(--text-secondary); margin-bottom: 10px; }
+    ul { padding-left: 18px; color: var(--text-secondary); margin-top: 6px; }
+    li { margin-bottom: 8px; }
+    code {
+      font-family: ui-monospace, Consolas, monospace; font-size: 13.5px;
+      background-color: var(--surface); padding: 2px 6px; border-radius: 5px;
+    }
+    .contact-card {
+      background-color: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 20px; margin-top: 12px; font-size: 14.5px;
+    }
+    footer { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <span class="badge">Privacy Policy · On-Device Lifelog</span>
+      <h1>나의일상다이어리 개인정보처리방침</h1>
+      <div class="meta">시행일자: 2026년 11월 12일 · 패키지명: <code>com.autologue.app</code> · 개발자: 짤딸마크</div>
+    </header>
+    <div class="lead">
+      나의일상다이어리(이하 "본 앱")는 별도의 회원가입이나 자체 수집 서버 없이 이용자의 스마트폰 내부 데이터베이스(Android Room DB)에서만 하루 이동 동선, 카드·계좌 소비 내역, 차량 운행 기록을 자동 정리하는 <strong>온디바이스(On-Device) 라이프로그·가계부·차계부 앱</strong>입니다. 단말기에서 처리되는 문자, 알림, 위치, 사진 정보는 개발자 서버나 제3자에게 전송되지 않습니다.
+    </div>
+    <section>
+      <h2>1. 단말기 내에서 접근하는 정보 항목 및 이용 목적</h2>
+      <p>본 앱은 이용자가 앱 내 사전 고지(Prominent Disclosure)를 확인하고 직접 허용한 권한 범위 내에서만 다음 기능을 기기 내부에서 수행합니다.</p>
+      <ul>
+        <li><strong>위치 정보(포그라운드 및 백그라운드, <code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>, <code>ACCESS_BACKGROUND_LOCATION</code>):</strong> 차량 블루투스 연결 시 이용자가 매번 앱을 열지 않아도 승차부터 하차까지의 출퇴근·일반 주행 경로, 방문 거점, 운행 소요시간을 스마트 차계부와 하루 이동 지도에 자동 기록하기 위해 사용합니다. 최근접 건물·정류장 명칭 조회 시 개인 식별 정보 없이 위·경도 좌표만 지오코딩 조회에 일시 활용합니다.</li>
+        <li><strong>문자 메시지 및 알림 접근(<code>READ_SMS</code>, <code>RECEIVE_SMS</code>, <code>RECEIVE_MMS</code>, <code>BIND_NOTIFICATION_LISTENER_SERVICE</code>):</strong> 카드 결제 승인 문자, 입출금 안내 문자, 간편결제 푸시 알림을 단말기 내부에서 분석하여 자동 가계부(내 소비) 내역을 생성하기 위해 사용하며 원문이나 금융 정보를 외부로 전송하지 않습니다.</li>
+        <li><strong>사진 및 미디어 위치 메타데이터(<code>READ_MEDIA_IMAGES</code>, <code>ACCESS_MEDIA_LOCATION</code>):</strong> 갤러리 사진의 촬영 시각과 EXIF 위치 좌표를 읽어 일자별 방문 거점 타임라인을 구성하는 용도로만 사용합니다.</li>
+        <li><strong>블루투스 및 포그라운드 서비스(<code>BLUETOOTH_CONNECT</code>, <code>FOREGROUND_SERVICE_LOCATION</code>, <code>FOREGROUND_SERVICE_DATA_SYNC</code>):</strong> 등록 차량의 블루투스 연결·해제를 감지해 자동 주행 기록을 시작·종료하고 대량 데이터 동기화 진행 상태를 상단 알림으로 투명하게 표시합니다.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>2. 개인정보의 보관 및 파기</h2>
+      <p>모든 기록은 이용자 스마트폰 내부 저장 공간에만 보관되며 개발자가 운영하는 외부 데이터베이스가 존재하지 않습니다. 이용자가 앱 내 개별 기록을 삭제하거나 스마트폰에서 앱을 삭제하면 저장된 모든 데이터는 즉시 영구 파기됩니다. 이용자가 직접 '엑셀 내보내기'를 실행한 경우에만 이용자가 지정한 기기 내 경로에 백업 파일이 생성됩니다.</p>
+    </section>
+    <section>
+      <h2>3. 이용자의 권리 및 접근 권한 철회 방법</h2>
+      <p>이용자는 언제든지 스마트폰의 <strong>설정 &rarr; 애플리케이션 &rarr; 나의일상다이어리 &rarr; 권한</strong> 메뉴(알림 접근은 특별 앱 액세스 메뉴)에서 위치, 문자, 사진, 블루투스, 알림 권한을 개별적으로 허용하거나 즉시 철회할 수 있습니다. 권한을 허용하지 않더라도 수동 기록 및 조회 기능을 이용할 수 있습니다.</p>
+    </section>
+    <section>
+      <h2>4. 개인정보 보호책임자 및 문의처</h2>
+      <div class="contact-card">
+        <p><strong>개발자 / 운영주체:</strong> 짤딸마크</p>
+        <p><strong>문의 이메일:</strong> <a href="mailto:devconsole0121@gmail.com">devconsole0121@gmail.com</a></p>
+      </div>
+    </section>
+    <footer>
+      &copy; 2026 짤딸마크. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
