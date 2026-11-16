@@ -110,7 +110,7 @@
     <ul>
       <li><strong>위치 정보 (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code> - 선택 권한)</strong>: 이용자가 현위치 반영 또는 인앱 실시간 주행 안내를 실행할 때 포그라운드 상태에서 출발점 설정, 현재 속도, 남은 거리를 계산하는 목적으로만 일시 사용합니다. 백그라운드 상시 위치 추적은 수행하지 않습니다.</li>
       <li><strong>출퇴근 운행 기록 (기기 내부 로컬 저장)</strong>: 출발지·목적지 명칭, 주행 도로축, 출발 날짜·시각, 요일, 계절, 날씨, 공휴일·샌드위치 연휴 여부, 실제 소요시간 데이터는 이용자 스마트폰 내부의 로컬 SQLite 데이터베이스(<code>total_navi_commute.db</code>)에만 보관됩니다.</li>
-      <li><strong>광고 식별자 및 인앱 결제 확인 (정식판 한정)</strong>: 광고 포함 정식판에서는 Google AdMob SDK가 배너 광고 제공 및 부정 트래픽 방지를 위해 광고 ID(<code>com.google.android.gms.permission.AD_ID</code>)를 처리할 수 있으며, 프리미엄 광고 제거 구매 시 Google Play 결제 시스템을 통해 권한 보유 여부만 확인합니다. 무광고 에디션(<code>noads</code>)에는 광고 SDK가 포함되지 않습니다.</li>
+      <li><strong>광고 식별자 및 인앱 결제 확인 (정식판 한정)</strong>: 광고 포함 정식판에서는 Google AdMob SDK가 배너·네이티브 광고 제공 및 부정 트래픽 방지를 위해 광고 ID(<code>com.google.android.gms.permission.AD_ID</code>)를 처리할 수 있으며, 프리미엄 광고 제거 구매 시 Google Play 결제 시스템을 통해 권한 보유 여부만 확인합니다. 무광고 에디션(<code>noads</code>)에는 광고 SDK가 포함되지 않습니다.</li>
     </ul>
 
     <h2>2. 제3자 제공 및 외부 내비게이션 연동</h2>

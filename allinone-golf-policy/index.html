@@ -153,7 +153,7 @@
       <span class="badge">Privacy Policy</span>
       <h1>올인원골프(All-in-One Golf) 개인정보처리방침</h1>
       <div class="meta">
-        시행일자: 2026년 11월 12일 · 적용 대상 앱: 올인원골프 (패키지명: com.jjalddalmark.allinonegolfapp)
+        시행일자: 2026년 11월 16일 · 적용 대상 앱: 올인원골프 (패키지명: com.jjalddalmark.allinonegolfapp)
       </div>
     </header>
 
@@ -187,14 +187,17 @@
         <li>필드 및 스크린 라운드 스코어·샷 기록 통합 조회 및 분석</li>
       </ul>
       <p style="margin-top: 10px;">
-        이용자가 티타임 수집, 예약 이동, 라운드 기상 조회, 스코어 동기화 기능을 실행할 때에만 이용자의 기기에서 해당 공식 골프 서비스 제공사 서버 및 공개 기상 예보 서비스(기상청 동네예보 격자 XML, Open-Meteo 다중 수치예보 API)로 직접 통신이 이루어지며 골프장 격자 좌표 외 개인 식별 정보는 기상 서버로 전송되지 않습니다.
+        이용자가 티타임 수집, 예약 이동, 스코어 동기화 기능을 실행할 때에만 이용자의 기기에서 해당 공식 골프 서비스 제공사 서버 및 공개 기상 예보 API(Open-Meteo 등)로 직접 암호화(HTTPS/TLS) 통신이 이루어집니다.
       </p>
     </section>
 
     <section>
-      <h2>3. 제3자 제공 및 공유 여부</h2>
+      <h2>3. 제3자 제공 및 광고 서비스(Google AdMob) 안내</h2>
       <p>
-        앱은 이용자의 개인정보나 기기 데이터를 광고 네트워크, 데이터 브로커 등 어떠한 제3자에게도 판매, 대여, 제공하거나 공유하지 않습니다. 또한 앱 내에 제3자 맞춤형 광고 SDK나 외부 행동 추적 분석 도구를 포함하지 않습니다.
+        앱은 이용자가 입력한 외부 골프 플랫폼 계정 정보, 위치 좌표, 라운드 스코어 기록을 외부 제3자에게 판매, 대여, 제공하거나 공유하지 않습니다.
+      </p>
+      <p>
+        단, 무료 앱 서비스 운영을 위해 Google Play 정식 배포판(ads)에는 Google LLC가 제공하는 모바일 광고 SDK(Google AdMob)가 포함되어 있으며 앱 최초 구동 스플래시, 하단 배너, 종료 확인 화면에 광고가 게재될 수 있습니다. 이 과정에서 Google AdMob은 광고 제공, 노출 빈도 제한, 부정 트래픽 방지를 위해 Android 광고 식별자(AD_ID), 기본 기기·네트워크 진단 정보 및 광고 상호작용 데이터를 Google 개인정보처리방침에 따라 자동 수집·처리할 수 있습니다. 이용자는 스마트폰의 [설정 &gt; Google &gt; 광고] 메뉴에서 언제든지 광고 ID를 재설정하거나 맞춤형 광고를 제한할 수 있으며, 내부 테스트용 무광고판(noads)에는 광고 SDK 및 광고 식별자 권한이 포함되지 않습니다.
       </p>
     </section>
 
@@ -206,6 +209,7 @@
         <li><strong>알림 (POST_NOTIFICATIONS · 선택)</strong>: 맞춤 조건 티타임 발견 알림, 백그라운드 자동수집 완료 알림, 예약 라운드 출발 15분 전 알림 표시에 사용됩니다.</li>
         <li><strong>포그라운드 데이터 동기화 및 재부팅 수신 (FOREGROUND_SERVICE_DATA_SYNC, RECEIVE_BOOT_COMPLETED)</strong>: 이용자가 직접 활성화한 자동 티타임 수집 스케줄 및 예약 출발 알림을 안정적으로 실행하기 위해 사용됩니다.</li>
         <li><strong>네트워크 상태 확인 및 인터넷 (INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE)</strong>: 실시간 티타임, 기상 예보, 스코어 데이터를 각 플랫폼 서버에서 직접 불러오기 위해 사용됩니다.</li>
+        <li><strong>광고 식별자 (com.google.android.gms.permission.AD_ID · 정식 배포판)</strong>: Google AdMob 광고 게재, 빈도 제어 및 부정 클릭 방지를 위해 정식 배포판(ads)에서만 사용됩니다.</li>
       </ul>
     </section>
 

@@ -55,6 +55,9 @@
     p { color: var(--text-secondary); margin-bottom: 10px; }
     ul { padding-left: 18px; color: var(--text-secondary); margin-top: 6px; }
     li { margin-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; color: var(--text-secondary); }
+    th { background-color: var(--surface); color: var(--text-primary); font-weight: 700; }
     code {
       font-family: ui-monospace, Consolas, monospace; font-size: 13.5px;
       background-color: var(--surface); padding: 2px 6px; border-radius: 5px;
@@ -71,10 +74,10 @@
     <header>
       <span class="badge">Privacy Policy · On-Device Lifelog</span>
       <h1>나의일상다이어리 개인정보처리방침</h1>
-      <div class="meta">시행일자: 2026년 11월 12일 · 패키지명: <code>com.autologue.app</code> · 개발자: 짤딸마크</div>
+      <div class="meta">시행일자: 2026년 11월 16일 · 패키지명: <code>com.autologue.app</code> · 개발자: 짤딸마크</div>
     </header>
     <div class="lead">
-      나의일상다이어리(이하 "본 앱")는 별도의 회원가입이나 자체 수집 서버 없이 이용자의 스마트폰 내부 데이터베이스(Android Room DB)에서만 하루 이동 동선, 카드·계좌 소비 내역, 차량 운행 기록을 자동 정리하는 <strong>온디바이스(On-Device) 라이프로그·가계부·차계부 앱</strong>입니다. 단말기에서 처리되는 문자, 알림, 위치, 사진 정보는 개발자 서버나 제3자에게 전송되지 않습니다.
+      나의일상다이어리(이하 "본 앱")는 별도의 회원가입이나 자체 수집 서버 없이 이용자의 스마트폰 내부 데이터베이스(Android Room DB)에서만 하루 이동 동선, 카드·계좌 소비 내역, 온라인 쇼핑 주문 품목, 차량 운행 기록을 자동 정리하는 <strong>온디바이스(On-Device) 라이프로그·가계부·차계부 앱</strong>입니다. 단말기에서 처리되는 문자, 알림, 정밀 GPS 위치, 사진, 쇼핑 주문 정보는 개발자 서버나 제3자에게 전송되지 않습니다.
     </div>
     <section>
       <h2>1. 단말기 내에서 접근하는 정보 항목 및 이용 목적</h2>
@@ -87,15 +90,39 @@
       </ul>
     </section>
     <section>
-      <h2>2. 개인정보의 보관 및 파기</h2>
-      <p>모든 기록은 이용자 스마트폰 내부 저장 공간에만 보관되며 개발자가 운영하는 외부 데이터베이스가 존재하지 않습니다. 이용자가 앱 내 개별 기록을 삭제하거나 스마트폰에서 앱을 삭제하면 저장된 모든 데이터는 즉시 영구 파기됩니다. 이용자가 직접 '엑셀 내보내기'를 실행한 경우에만 이용자가 지정한 기기 내 경로에 백업 파일이 생성됩니다.</p>
+      <h2>2. 제3자 광고 서비스(Google AdMob) 연동 및 광고 식별자(<code>AD_ID</code>) 안내</h2>
+      <p>프로덕션 정식 배포판(<code>ads</code>)은 무료 라이프로그·가계부 기능을 지속적으로 제공하기 위해 Google LLC의 모바일 광고 플랫폼인 <strong>Google AdMob(Google Mobile Ads SDK)</strong>을 사용합니다. 개발자가 개인정보를 직접 수집하지 않더라도 정식판 앱에 포함된 Google Mobile Ads SDK가 배너·네이티브 광고 표시, 노출 빈도 제한, 성과 측정 및 부정 클릭 방지를 위해 아래의 기기·진단 데이터를 암호화(HTTPS/TLS) 통신으로 자동 수집·처리할 수 있습니다. (단, 무광고판 <code>noads</code> 빌드에는 광고 SDK와 <code>AD_ID</code> 권한이 포함되지 않습니다.)</p>
+      <table>
+        <thead>
+          <tr>
+            <th>수집·처리 주체</th>
+            <th>자동 처리 항목</th>
+            <th>이용 목적</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google LLC (Google AdMob)</td>
+            <td>Android 광고 ID(<code>com.google.android.gms.permission.AD_ID</code>), IP 주소 기반 대략적 지역 정보(단말기 정밀 GPS 주행 기록 제외), 기기 모델·OS 버전, 광고 노출·클릭 상호작용 및 광고 SDK 진단 로그</td>
+            <td>구동·하단 배너 및 종료 화면 네이티브 광고 제공, 맞춤형 또는 비맞춤형 광고 송출, 광고 성과 집계 및 무효 트래픽 방지</td>
+          </tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>이용자는 언제든지 스마트폰의 <strong>설정 &rarr; Google &rarr; 모든 서비스 &rarr; 광고</strong>(또는 <strong>설정 &rarr; 개인정보 보호 &rarr; 광고</strong>) 메뉴에서 <strong>광고 ID 재설정</strong> 또는 <strong>광고 ID 삭제</strong>를 선택하여 맞춤형 광고 식별자 활용을 제한할 수 있습니다.</li>
+        <li>Google의 데이터 처리 방침은 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a> 및 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 광고 정책</a>에서 확인할 수 있습니다.</li>
+      </ul>
     </section>
     <section>
-      <h2>3. 이용자의 권리 및 접근 권한 철회 방법</h2>
+      <h2>3. 개인정보의 보관 및 파기</h2>
+      <p>일상 동선, 소비 내역, 쇼핑 주문, 차량 운행 기록 등 모든 라이프로그 데이터는 이용자 스마트폰 내부 저장 공간에만 보관되며 개발자가 운영하는 외부 데이터베이스가 존재하지 않습니다. 이용자가 앱 내 개별 기록을 삭제하거나 스마트폰에서 앱을 삭제하면 저장된 모든 로컬 데이터는 즉시 영구 파기됩니다. 이용자가 직접 '엑셀 내보내기'를 실행한 경우에만 이용자가 지정한 기기 내 경로에 백업 파일이 생성됩니다.</p>
+    </section>
+    <section>
+      <h2>4. 이용자의 권리 및 접근 권한 철회 방법</h2>
       <p>이용자는 언제든지 스마트폰의 <strong>설정 &rarr; 애플리케이션 &rarr; 나의일상다이어리 &rarr; 권한</strong> 메뉴(알림 접근은 특별 앱 액세스 메뉴)에서 위치, 문자, 사진, 블루투스, 알림 권한을 개별적으로 허용하거나 즉시 철회할 수 있습니다. 권한을 허용하지 않더라도 수동 기록 및 조회 기능을 이용할 수 있습니다.</p>
     </section>
     <section>
-      <h2>4. 개인정보 보호책임자 및 문의처</h2>
+      <h2>5. 개인정보 보호책임자 및 문의처</h2>
       <div class="contact-card">
         <p><strong>개발자 / 운영주체:</strong> 짤딸마크</p>
         <p><strong>문의 이메일:</strong> <a href="mailto:devconsole0121@gmail.com">devconsole0121@gmail.com</a></p>
