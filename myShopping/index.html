@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마이쇼핑 개인정보처리방침</title>
+  <style>
+    :root {
+      --bg: #f5f6f8;
+      --surface: #ffffff;
+      --raised: #eceff3;
+      --hairline: #e1e5eb;
+      --text-primary: #16181d;
+      --text-secondary: #4b5362;
+      --text-muted: #767f8f;
+      --accent: #0f6e56;
+      --accent-soft: #e8f5f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111317;
+        --surface: #181b21;
+        --raised: #21262f;
+        --hairline: #2c3340;
+        --text-primary: #f1f3f7;
+        --text-secondary: #a7b0c0;
+        --text-muted: #7d8697;
+        --accent: #34d399;
+        --accent-soft: #132f28;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Malgun Gothic", sans-serif;
+      line-height: 1.68;
+      padding: 32px 16px 64px;
+      font-variant-numeric: tabular-nums;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 16px;
+      padding: 36px 28px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--hairline);
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    p, li {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 13px;
+      background: var(--raised);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--text-primary);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--hairline);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="badge"><span class="dot"></span>온디바이스 데이터 보호 표준</div>
+    <h1>마이쇼핑 개인정보처리방침</h1>
+    <p class="meta">패키지명: <code>com.jjalddalmark.myshopping</code> · 시행일자: 2026년 11월 20일</p>
+
+    <p><strong>마이쇼핑</strong>(이하 "앱")은 이용자의 개인정보와 사생활을 최우선으로 보호하며 『개인정보 보호법』 및 Google Play 개발자 프로그램 정책을 준수합니다. 본 방침은 앱이 어떠한 데이터를 기기 내에서 처리하고 어떻게 보호하는지 명확히 안내합니다.</p>
+
+    <h2>1. 개인정보의 기기 내 처리 원칙 (외부 서버 미전송)</h2>
+    <p>앱은 별도의 회원가입 절차나 개발자 운영 백엔드 서버를 두지 않는 온디바이스(On-Device) 전용 애플리케이션입니다.</p>
+    <ul>
+      <li><strong>쇼핑몰 연결 계정 및 웹 세션 정보:</strong> 이용자가 직접 입력하거나 로그인한 쇼핑몰 세션 쿠키 및 계정 설정 정보는 이용자 스마트폰 내부의 앱 전용 보안 영역(<code>SharedPreferences</code> 난독화 저장소 및 Android 시스템 <code>WebView</code> 저장소)에만 저장되며 개발자나 제3자 서버로 전송되지 않습니다.</li>
+      <li><strong>수집된 쇼핑 주문·배송 원장 데이터:</strong> 백그라운드 자동 수집, 인앱 웹 동기화, 텍스트 붙여넣기, 푸시 알림 감지를 통해 정리된 주문 일시, 주문번호, 상품명, 옵션, 결제 금액, 배송 상태 데이터는 기기 내부 로컬 데이터베이스(<code>SQLite</code>)에만 보관됩니다.</li>
+      <li><strong>엑셀(.xlsx) 및 JSON 백업 파일:</strong> 이용자가 직접 내보내기 기능을 실행한 경우에만 기기 저장소에 저장되거나 이용자가 선택한 공유 대상 앱으로 전달됩니다.</li>
+    </ul>
+
+    <h2>2. 기기 권한 이용 안내</h2>
+    <p>앱은 쇼핑 데이터 수집 기능 제공에 꼭 필요한 최소한의 권한만 사용하며 백그라운드 위치(GPS), 주소록, 카메라, 마이크, 문자메시지(SMS) 권한을 요구하지 않습니다.</p>
+    <ul>
+      <li><code>INTERNET</code> 및 <code>ACCESS_NETWORK_STATE</code> (필수): 이용자가 연결한 쇼핑몰 주문 내역 웹페이지 접속, Google Play 인앱 결제 확인, 정식판 광고 로드에 사용됩니다.</li>
+      <li><code>BIND_NOTIFICATION_LISTENER_SERVICE</code> (선택 — 알림 접근 권한): 이용자가 시스템 설정에서 직접 허용하고 스위치를 켠 경우에 한해, 지정된 쇼핑몰 앱(쿠팡, 네이버쇼핑, 11번가, G마켓, SSG, 오늘의집, 올리브영, 컬리, 무신사 등)의 주문·배송 관련 상태바 알림에서 상품명·결제금액·배송상태만 기기 내부에서 파싱하여 로컬 원장에 기록합니다. 쇼핑과 무관한 일반 알림은 즉시 무시하며 어떠한 알림 내용도 외부 서버로 전송하거나 공유하지 않습니다.</li>
+      <li><code>POST_NOTIFICATIONS</code> (선택): 필요 시 데이터 수집 상태 안내 표시에 사용됩니다.</li>
+    </ul>
+
+    <h2>3. 제3자 서비스 모듈(SDK) 처리 안내</h2>
+    <p>프로덕션 정식판에는 무료 앱 운영을 위한 광고 제공 및 무광고 프리미엄 인앱 결제 확인을 위해 아래 Google 공식 SDK가 포함됩니다.</p>
+    <ul>
+      <li><strong>Google AdMob (<code>com.google.android.gms:play-services-ads</code>):</strong> 광고 송출, 빈도 제한, 부정 클릭 방지를 위해 기기 광고 ID(<code>AD_ID</code>), 대략적 위치(IP 기반), 광고 상호작용 및 비정상 종료 진단 정보를 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>에 따라 처리할 수 있습니다. 기기의 <code>설정 &gt; Google &gt; 광고</code> 메뉴에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</li>
+      <li><strong>Google Play 결제 (<code>com.android.billingclient:billing-ktx</code>):</strong> 프리미엄 무광고 업그레이드 구매 및 복원 상태를 Google Play 스토어를 통해 확인합니다.</li>
+    </ul>
+
+    <h2>4. 데이터의 보유 기간 및 파기 방법</h2>
+    <p>모든 쇼핑 데이터와 계정 설정은 이용자의 기기 내부에만 존재하므로 이용자가 언제든지 즉시 파기할 수 있습니다.</p>
+    <ul>
+      <li><strong>개별 파기:</strong> 앱 내 <code>주문 원장</code>에서 개별·선택 주문 삭제, <code>계정·설정</code>에서 쇼핑몰 계정 삭제 및 수집 이력 비우기를 실행하면 즉시 파기됩니다.</li>
+      <li><strong>전체 영구 파기:</strong> 스마트폰 <code>설정 &gt; 애플리케이션 &gt; 마이쇼핑 &gt; 저장공간 &gt; 데이터 삭제</code>를 실행하거나 앱을 삭제하면 기기 내부의 모든 데이터베이스와 세션 정보가 즉시 복구 불가능한 상태로 완전 파기됩니다.</li>
+    </ul>
+
+    <h2>5. 아동의 개인정보 보호</h2>
+    <p>본 앱은 만 14세 미만 아동을 주 대상으로 하지 않으며 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+
+    <h2>6. 개인정보 보호 문의처</h2>
+    <ul>
+      <li>담당팀: 마이쇼핑 개발·운영팀</li>
+      <li>이메일: <a href="mailto:rohiphop@naver.com">rohiphop@naver.com</a></li>
+    </ul>
+
+    <div class="footer">
+      본 방침은 법령 및 서비스 변경 사항을 반영하기 위해 개정될 수 있으며, 변경 시 본 페이지를 통해 고지합니다.
+    </div>
+  </main>
+</body>
+</html>
